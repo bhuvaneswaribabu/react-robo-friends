@@ -1,6 +1,5 @@
 import React from 'react';
-import { robots } from './robots';
-import CardTemplate from './CardTemplate';
+import RoboCard from './RoboCard';
 
 import {
      Container, Row, Col 
@@ -10,11 +9,11 @@ const divStyle = {
     marginTop: '10px',
 };
 
-const CardTemplateList = () => {
+const RoboCardList = ({robots}) => {
     const cardComponent = robots.map((user, i) => {
         return (
             <Col sm="3" style={divStyle}> 
-                <CardTemplate  id={robots[i].id} name= {robots[i].name} email={robots[i].email}/> 
+                <RoboCard  id={robots[i].id} name= {robots[i].name} email={robots[i].email}/> 
             </Col>
         )
     })
@@ -24,8 +23,7 @@ const CardTemplateList = () => {
                 { cardComponent }
         </Row> 
       </Container>
-
     );
 }
 
-export default CardTemplateList;
+export default RoboCardList;

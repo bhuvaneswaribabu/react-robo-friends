@@ -12,7 +12,6 @@ class RoboCard extends React.Component {
       super();
         this.state = {
         isFlipped: false
-        
       };
       this.handleClick = this.handleClick.bind(this);
     }
@@ -26,12 +25,11 @@ class RoboCard extends React.Component {
       return (
         <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
                 <div >
-                    <Card style={{width: 250, height: 450, backgroundColor: 'powderblue'}}>
+                    <Card style={{width: 250, height: 450, backgroundColor: '#009999'}}>
                         <CardImg top width="100%"   src={`https://robohash.org/${this.props.id}?100x100`} alt="robots" />
                         <CardBody>
                             <CardTitle>{this.props.name} </CardTitle>
                             <CardSubtitle>{this.props.email}</CardSubtitle>
-                            <CardText>This is a about the King </CardText>
                             <Button onClick={this.handleClick} color="primary">Profile view</Button>
                         </CardBody>
                     </Card>
